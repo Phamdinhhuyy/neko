@@ -1,0 +1,11 @@
+{
+  "apps" : [{
+    "name": "Flask",
+    "script": "run.py",
+    "interpreter": "/usr/bin/python3",
+    "watch": true,
+    "env_development": {
+      "NODE_ENV": "development"
+    }
+  }]
+}
