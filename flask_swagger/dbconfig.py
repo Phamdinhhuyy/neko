@@ -12,9 +12,10 @@ load_dotenv(find_dotenv())
 
 user = os.environ.get("DBUSR")
 pwd = os.environ.get("DBPASS")
+url = os.environ.get("DBURL")
+port = os.environ.get("DBPORT")
 
-connection_string = f"mongodb://{user}:{pwd}@172.16.2.97:27017"
-#connection_string = f"mongodb://{user}:{pwd}@192.168.32.114:27017"
+connection_string = f"mongodb://{user}:{pwd}@{url}:{port}"
 client = MongoClient(connection_string)
 
 
