@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: flask_app
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - custom_network
+
+  db:
+    image: mongo:latest
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    networks:
+      - custom_network
+
+networks:
+  custom_network:
+    driver: bridge

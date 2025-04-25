@@ -21,3 +21,6 @@ print(response)
 load_dotenv(find_dotenv())
 password = os.environ.get("DBPASS")
 print(password)
+
+if os.environ.get("FLASK_ENV") == "test":
+    print(".....test mode.....")
