@@ -5,3 +5,6 @@ def init_app():
     from flask_swagger.dbconfig import swag
     app.register_blueprint(swag)
     return app
+
+    echo = "Hello, World!"
+    # This is a comment
